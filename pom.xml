@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.isortegah</groupId>
+    <artifactId>isortegah-archetype-cucumber-testng</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <archetype-packaging.version>3.0.1</archetype-packaging.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <extensions>
+          <extension>
+            <groupId>org.apache.maven.archetype</groupId>
+            <artifactId>archetype-packaging</artifactId>
+            <version>${archetype-packaging.version}</version>
+          </extension>
+        </extensions>
+
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-archetype-plugin</artifactId>
+              <version>${archetype-packaging.version}</version>
+              <extensions>true</extensions>
+            </plugin>
+            <!-- Make sure we include empty dirs in the archetypes' jars, but exclude the .emptydir-placeholder files.
+                 We could do this in the archetype-metadata instead (adding the exclude in <fileSet>, but it currently
+                 doesn't work (see https://jira.codehaus.org/browse/ARCHETYPE-458 ) -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-resources-plugin</artifactId>
+              <configuration>
+                <includeEmptyDirs>true</includeEmptyDirs>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+        <sourceDirectory>/src/main/java</sourceDirectory>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.2.5</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>1.2.5</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+</project>
