@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
         features = "src/test/resources/features" ,
-        glue = {"stepdefinition"} ,
+        glue = {"${package}.stepdefinition"} ,
         tags = {"@SearchGoogle"} ,
         format = {
                 "pretty",

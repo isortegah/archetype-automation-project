@@ -40,18 +40,4 @@
         </pluginManagement>
         <sourceDirectory>/src/main/java</sourceDirectory>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-core</artifactId>
-            <version>1.2.5</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>1.2.5</version>
-            <type>jar</type>
-        </dependency>
-    </dependencies>
 </project>
