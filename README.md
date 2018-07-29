@@ -1,7 +1,7 @@
 # Archetype-Cucumber-TestNG
 
 
-Este Arquetipo un patrón o modelo original a partir del cual podemos crear un proyecto de automatización de pruebas utilizando Cucumber como framework para implementar BDD y TestNG como framework de ejecución de las pruebas. 
+Este Arquetipo es un patrón o modelo original, a partir del cual podemos crear un proyecto de automatización de pruebas utilizando Cucumber como framework para implementar BDD y TestNG como framework de ejecución de las pruebas. 
 
 El Arquetipo nos proporciona lo minimo necesario para comenzar a codifcar nuestras pruebas. En cuestión de segundos, podemos tener un proyecto Maven en funcionamiento.
 
@@ -24,9 +24,7 @@ Una vez con el Arqeutipo en nuestro equipo procedemos a ingresar a el y ejecutar
 mvn install
 ```
 
-Esto pondrá a disposición al Arquetipo en el repositorio local de maven.
-
-Ahora podemos proceder a crear nuestro proyecto con el Arquetipo.
+Esto pondrá a disposición al Arquetipo en el repositorio local de maven. Ahora podemos proceder a crear nuestro proyecto con el.
 
 **Nota:** Ubicarse en el directorio donde se requiere crear el proyecto.
 
