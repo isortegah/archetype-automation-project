@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         features = "src/test/resources/features" ,
         glue = {"${package}.stepdefinition"} ,
         tags = {"@SearchGoogle"} ,
-        format = {
+        plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",

@@ -7,26 +7,26 @@
     <packaging>jar</packaging>
     <name>${name}</name>
     <properties>
-        <cucumber-java.version>1.2.5</cucumber-java.version>
-        <cucumber-jvm-deps.version>1.0.5</cucumber-jvm-deps.version>
-        <cucumber-testng.version>1.2.5</cucumber-testng.version>
+        <cucumber-java.version>3.0.2</cucumber-java.version>
+        <cucumber-jvm-deps.version>1.0.6</cucumber-jvm-deps.version>
+        <cucumber-testng.version>3.0.2</cucumber-testng.version>
         <slf4j-simple.version>1.7.25</slf4j-simple.version>
         <maven-failsafe.version>2.21.0</maven-failsafe.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumber-java.version}</version>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-jvm-deps</artifactId>
             <version>${cucumber-jvm-deps.version}</version>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>${cucumber-testng.version}</version>
             <scope>compile</scope>
