@@ -9,8 +9,8 @@ El Arquetipo nos proporciona lo minimo necesario para comenzar a codifcar nuestr
 ## Instalación
 
 * Prerequisitos  
-    ** [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-    ** [Maven](https://maven.apache.org/download.cgi)
+    - [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+    - [Maven](https://maven.apache.org/download.cgi)
 
 Al momento no se ha publicado el Arquetipo en algún repositorio, por lo que se requiere clonar el proyecto.
 
