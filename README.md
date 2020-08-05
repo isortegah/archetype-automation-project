@@ -5,57 +5,82 @@ Este Arquetipo es un patrón o modelo original, a partir del cual podemos crear 
 
 El Arquetipo nos proporciona lo minimo necesario para comenzar a codifcar nuestras pruebas. En cuestión de segundos, podemos tener un proyecto Maven en funcionamiento.
 
-
-## Instalación
-
 * Prerequisitos  
     ** Java  
     ** Maven
 
-Al momento no se ha publicado el Arquetipo en algún repositorio, por lo que se requiere clonar el proyecto.
+## Implementación
 
-```bash
-git clone https://github.com/isortegah/archetype-cucumber-testng.git
-```
+* Configuración de settings.xml
 
-Una vez con el Arqeutipo en nuestro equipo procedemos a ingresar a el y ejecutar el comando:
+    Dado que el arquetipo se encuentra almancenado en el repositorio de Github, requerimos agregar lo siguiente en el
+    archivo **settings.xml** dentro de la ruta **~/.m2** o en el caso de que tenga configurada otra ubicación realizar 
+    el ajuste:
+    
+    ```xml
+      <profiles>
+          <profile>
+              <id>global</id>
+              <repositories>
+                  <repository>
+                      <id>archetype</id>
+                      <name>isortegah</name>
+                      <url>https://maven.pkg.github.com/isortegah/package</url>
+                  </repository>
+              </repositories>
+          </profile>
+      </profiles>
+      <activeProfiles>
+          <activeProfile>global</activeProfile>
+      </activeProfiles>
+    ```
+  
+    De esta forma al ejecutar el comando **mvn archetype:generate** se ira a buscar el componente requerido.
 
-```bash
-mvn install
-```
+    Para el caso de que no puedan modificar el archivo **settings.xml** podrían optar por el proyecto.
 
-Esto pondrá a disposición al Arquetipo en el repositorio local de maven. Ahora podemos proceder a crear nuestro proyecto con el.
+    ```bash
+    git clone https://github.com/isortegah/archetype-automation-project.git
+    ```
 
-**Nota:** Ubicarse en el directorio donde se requiere crear el proyecto.
+    Una vez con el Arqeutipo en nuestro equipo procedemos a ingresar a el y ejecutar el comando:
 
-```bash
-mvn archetype:generate \
-	-DarchetypeGroupId=com.isortegah \
-	-DarchetypeArtifactId=isortegah-archetype-cucumber-testng	\
-	-DarchetypeVersion=0.1.0-SNAPSHOT \
-	-DartifactId=<artifactIS> \
-	-Dversion=<version artifact> \
-	-DgroupId=<groupID project>	\
-	-Dname=<project name>
-```
+    ```bash
+    mvn install
+    ```
 
-Ejemplo:
+    Esto pondrá a disposición al Arquetipo en el repositorio local de maven. Ahora podemos proceder a crear nuestro proyecto con el.
 
-```bash
-mvn archetype:generate \
-	-DarchetypeGroupId=com.isortegah \
-	-DarchetypeArtifactId=isortegah-archetype-cucumber-testng \
-	-DarchetypeVersion=0.1.0-SNAPSHOT \
-	-DartifactId=validations \
-	-Dversion=0.1.0-SNAPSHOT \
-	-DgroupId=com.isortegah.validations \
-	-Dname=validations
-```
-Una vez se haya creado el proyecto, ingresar al directorio del mismo y ejecutar:
+    **Nota:** Ubicarse en el directorio donde se requiere crear el proyecto.
 
-```bash
-mvn verify
-```
+    ```bash
+    mvn archetype:generate \
+        -DarchetypeGroupId=me.isortegah \
+        -DarchetypeArtifactId=archetype-automation-project \
+        -DarchetypeVersion=0.1.1-SNAPSHOT \
+        -DartifactId=<artifactIS> \
+        -Dversion=<version artifact> \
+        -DgroupId=<groupID project>	\
+        -Dname=<project name>
+    ```
+
+    Ejemplo:
+
+    ```bash
+    mvn archetype:generate \
+        -DarchetypeGroupId=com.isortegah \
+        -DarchetypeArtifactId=archetype-automation-project \
+        -DarchetypeVersion=0.1.1-SNAPSHOT \
+        -DartifactId=validations \
+        -Dversion=0.1.0-SNAPSHOT \
+        -DgroupId=me.isortegah.validations \
+        -Dname=validations
+    ```
+    Una vez se haya creado el proyecto, ingresar al directorio del mismo y ejecutar:
+
+    ```bash
+    mvn verify
+    ```
 Lo que nos arrojara lo siguiente: 
 
 ```java
