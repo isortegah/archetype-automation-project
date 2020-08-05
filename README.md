@@ -1,4 +1,4 @@
-# Archetype-Cucumber-TestNG
+# Archetype-Automation-Project
 
 
 Este Arquetipo es un patrón o modelo original, a partir del cual podemos crear un proyecto de automatización de pruebas utilizando Cucumber como framework para implementar BDD y TestNG como framework de ejecución de las pruebas. 
