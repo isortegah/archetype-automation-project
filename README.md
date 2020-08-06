@@ -25,7 +25,7 @@ El Arquetipo nos proporciona lo minimo necesario para comenzar a codifcar nuestr
                   <repository>
                       <id>archetype</id>
                       <name>isortegah</name>
-                      <url>https://maven.pkg.github.com/isortegah/package</url>
+                      <url>https://maven.pkg.github.com/isortegah/archetype-automation-project</url>
                   </repository>
               </repositories>
           </profile>
@@ -68,7 +68,7 @@ El Arquetipo nos proporciona lo minimo necesario para comenzar a codifcar nuestr
 
     ```bash
     mvn archetype:generate \
-        -DarchetypeGroupId=com.isortegah \
+        -DarchetypeGroupId=me.isortegah \
         -DarchetypeArtifactId=archetype-automation-project \
         -DarchetypeVersion=0.1.1-SNAPSHOT \
         -DartifactId=validations \
@@ -124,3 +124,7 @@ cucumber.api.PendingException: TODO: implement me
 [INFO] ------------------------------------------------------------------------
 ```
 Con esto tendremos lo mínimo necesario para comenzar a codificar pruebas.
+
+## Referencias
+
+![Configurar Apache Maven para usar con paquetes de GitHub](https://docs.github.com/es/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages)
